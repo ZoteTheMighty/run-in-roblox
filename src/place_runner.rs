@@ -69,7 +69,7 @@ impl PlaceRunner {
         }
     }
 
-    pub fn run_with_sender(&self, message_processor: mpsc::Sender<Option<RobloxMessage>>) {
+    pub fn run(&self, message_processor: mpsc::Sender<Option<RobloxMessage>>) {
         let message_receiver = MessageReceiver::start(MessageReceiverOptions {
             port: self.port,
         });

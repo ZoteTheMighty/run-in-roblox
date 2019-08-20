@@ -11,7 +11,7 @@ path = "src/lib.rs"
 
 [[bin]]
 name = "run-in-roblox"
-path = "src/main.rs"
+path = "src/bin.rs"
 
 [dependencies]
 clap = "2.32.0"

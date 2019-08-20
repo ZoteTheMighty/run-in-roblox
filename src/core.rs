@@ -22,7 +22,7 @@ pub fn run_place(
     let place = PlaceRunner::new(tree, options);
     let (message_tx, message_rx) = mpsc::channel();
 
-    place.run_with_sender(message_tx);
+    place.run(message_tx);
 
     message_rx
 }
@@ -42,7 +42,7 @@ pub fn run_script(options: PlaceRunnerOptions) -> Receiver<Option<RobloxMessage>
     let (message_tx, message_rx) = mpsc::channel();
 
     info!("Running place...");
-    place.run_with_sender(message_tx);
+    place.run(message_tx);
 
     message_rx
 }
